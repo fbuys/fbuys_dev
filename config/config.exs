@@ -3,7 +3,8 @@ import Config
 config :esbuild,
   version: "0.14.41",
   default: [
-    args: ~w(js/app.js),
+    args:
+      ~w(js/app.js --bundle --target=es2017 --outdir=../dist/assets --external:/fonts/* --external:/images/*),
     cd: Path.expand("../assets", __DIR__)
   ]
 
