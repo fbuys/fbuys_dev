@@ -7,6 +7,7 @@ defmodule FbuysDev.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
+      aliases: aliases(),
       deps: deps()
     ]
   end
@@ -29,6 +30,16 @@ defmodule FbuysDev.MixProject do
       {:phoenix_live_view, "~> 0.18"},
       # Dev and Test
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
+    ]
+  end
+
+  defp aliases() do
+    [
+      "site.build": [
+        "build",
+        "sass default --no-source-map --style=compressed",
+        "esbuild default --minify"
+      ]
     ]
   end
 end
