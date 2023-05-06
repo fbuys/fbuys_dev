@@ -21,9 +21,11 @@ defmodule FbuysDev.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:nimble_publisher, "~> 1.0"},
+      {:dart_sass, "~> 0.6"},
+      {:esbuild, "~> 0.5"},
       {:makeup_elixir, ">= 0.0.0"},
       {:makeup_erlang, ">= 0.0.0"},
+      {:nimble_publisher, "~> 1.0"},
       {:phoenix_live_view, "~> 0.18"},
       # Dev and Test
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
