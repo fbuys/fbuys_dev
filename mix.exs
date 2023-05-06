@@ -24,6 +24,7 @@ defmodule FbuysDev.MixProject do
       {:nimble_publisher, "~> 1.0"},
       {:makeup_elixir, ">= 0.0.0"},
       {:makeup_erlang, ">= 0.0.0"},
+      {:phoenix_live_view, "~> 0.18"},
       # Dev and Test
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]

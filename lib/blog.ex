@@ -3,7 +3,7 @@ defmodule FbuysDev.Blog do
 
   use NimblePublisher,
     build: Post,
-    from: Application.app_dir(:fbuys_dev, "priv/posts/**/*.md"),
+    from: "./posts/**/*.md",
     as: :posts,
     highlighters: [:makeup_elixir, :makeup_erlang]
 
