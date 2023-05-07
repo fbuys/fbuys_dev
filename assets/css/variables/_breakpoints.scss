@@ -1,0 +1,40 @@
+// Mobile first: Everything < 550px is mobile
+$bp-small: 550px;
+$bp-medium: 1100px;
+$bp-large: 1500px;
+
+// BREAKPOINT MIXINS
+// ==============================
+
+// will be applied to element above width $bp
+// usage:
+//    @include breakpoint-min($bp) {
+//      ...styles
+//    }
+@mixin breakpoint-min($bp) {
+    @media (min-width: $bp) {
+        @content;
+    }
+}
+
+// will be applied to element below width $bp
+// usage:
+//    @include breakpoint-max($bp) {
+//      ...styles
+//    }
+@mixin breakpoint-max($bp) {
+    @media (max-width: $bp) {
+        @content;
+    }
+}
+
+// will be applied to element above widht $bp1 and below width $bp2
+// usage:
+//    @include breakpoint-min-max($bp1, $bp2) {
+//      ...styles
+//    }
+@mixin breakpoint-min-max($bp1, $bp2) {
+    @media (min-width: $bp1) and (max-width: $bp2) {
+        @content;
+    }
+}
