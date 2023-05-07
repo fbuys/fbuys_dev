@@ -70,7 +70,7 @@ defmodule FbuysDev do
         <script type="text/javascript" src="/assets/app.js" />
       </head>
       <body>
-        <main tabindex="-1" id="main-content">
+        <main tabindex="-1" id="main-content" class="l-main">
           <%= render_slot(@inner_block) %>
         </main>
       </body>
