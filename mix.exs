@@ -28,6 +28,7 @@ defmodule FbuysDev.MixProject do
       {:makeup_erlang, ">= 0.0.0"},
       {:nimble_publisher, "~> 1.0"},
       {:phoenix_live_view, "~> 0.18"},
+      { :uuid, "~> 1.1" },
       # Dev and Test
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
