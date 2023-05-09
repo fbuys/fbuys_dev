@@ -2,6 +2,7 @@ defmodule FbuysDev.Blog.Parser do
   @moduledoc """
   """
 
+    @t1_classes ".t1 .l-t1"
   def parse(path, contents) do
     with {:ok, attrs, body} <- parse_contents(path, contents) do
       body = body
@@ -13,13 +14,13 @@ defmodule FbuysDev.Blog.Parser do
 
   defp add_classes(text) do
     text
-    |> add_t1()
+    |> add_t1_classes()
   end
 
-  defp add_t1(text) do
+  defp add_t1_classes(text) do
     cond do
-      String.match?(text, ~r/^#.+\n(?:{:.+})/) -> String.replace_trailing(text, "}", " .t1}")
-      String.match?(text, ~r/^#/) -> text <> "\n{: .t1}"
+      String.match?(text, ~r/^#.+\n(?:{:.+})/) -> String.replace_trailing(text, "}", " #{@t1_classes}}")
+      String.match?(text, ~r/^#/) -> text <> "\n{: #{@t1_classes}}"
       true -> text
     end
   end
