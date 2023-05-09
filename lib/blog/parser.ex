@@ -5,7 +5,7 @@ defmodule FbuysDev.Blog.Parser do
   def parse(path, contents) do
     with {:ok, attrs, body} <- parse_contents(path, contents) do
       body = body
-      |> String.split("\n")
+      |> String.split(~r/\n(?!{:.+})/)
       |> Enum.map_join("\n", &(add_classes(&1)))
       {attrs, body}
     end
@@ -17,9 +17,10 @@ defmodule FbuysDev.Blog.Parser do
   end
 
   defp add_t1(text) do
-    case String.slice(text, 0..0) do
-      "#" -> text <> "\n{: .t1}"
-      _ -> text
+    cond do
+      String.match?(text, ~r/^#.+\n(?:{:.+})/) -> String.replace_trailing(text, "}", " .t1}")
+      String.match?(text, ~r/^#/) -> text <> "\n{: .t1}"
+      true -> text
     end
   end
 
