@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Rock+Salt&display=swap');
+// font-family: 'Lobster', cursive;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Rock Salt', cursive;
+
+html {
+  --font-sans-serif:
+    -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-serif:
+    Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
+  --font-1: "Montserrat", var(--font-sans-serif);
+  --font-2: "Lobster", cursive;
+  --font-3: "Rock Salt", cursive;
+
+  /* Set a global default */
+  font-family: 'Montserrat', var(--font-sans-serif);
+}
+
+.t1 {
+  font-family: var(--font-2);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.l-t1 {
+  padding-block-end: 16px;
+}

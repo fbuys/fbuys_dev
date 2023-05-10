@@ -46,8 +46,7 @@ defmodule FbuysDev do
   def index(assigns) do
     ~H"""
     <.layout>
-      <h1>fbuys.dev</h1>
-      <h2>Posts!</h2>
+      <h1 class="t1 l-t1">Posts!</h1>
       <ul>
         <li :for={post <- @posts}>
           <a href={post.path}> <%= post.title %> </a>
@@ -66,13 +65,17 @@ defmodule FbuysDev do
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>fbuys.dev</title>
-        <link rel="stylesheet" href="/assets/app.css" />
-        <script type="text/javascript" src="/assets/app.js" />
+        <link rel="stylesheet" href={"/assets/app.css?#{asset_hash()}"} />
+        <script type="text/javascript" src={"/assets/app.js?#{asset_hash()}"} />
       </head>
       <body>
-        <%= render_slot(@inner_block) %>
+        <main tabindex="-1" id="main-content" class="l-main">
+          <%= render_slot(@inner_block) %>
+        </main>
       </body>
     </html>
     """
   end
+
+  defp asset_hash(), do: UUID.uuid4()
 end

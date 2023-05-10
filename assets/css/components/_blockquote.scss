@@ -1,0 +1,46 @@
+.l-post-blockquote {
+  --blockquote-spacing: var(--size-8);
+  padding: var(--blockquote-spacing) var(--size-3);
+  margin: auto;
+}
+
+.c-post-blockquote {
+  position: relative;
+  font-family: var(--font-3);
+  font-size: var(--font-size-4);
+  color: var(--text-2);
+  text-align: center;
+
+  &::before,
+  &::after {
+    position: absolute;
+    color: var(--text-3);
+    font-size: var(--font-size-6);
+    width: var(--size-3);
+    top: var(--size-2);
+  }
+
+  &::before {
+    content: '“';
+    left: var(--size-2);
+  }
+
+  &::after {
+    content: '”';
+    right: var(--size-2);
+  }
+
+  & em {
+    position: absolute;
+    font-family: var(--font-1);
+    text-align: right;
+    font-size: var(--font-size-0);
+    bottom: var(--blockquote-spacing);
+    right: var(--size-3);
+
+    &::before {
+      	content: "— ";
+    }
+  }
+}
+

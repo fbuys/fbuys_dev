@@ -1,0 +1,11 @@
+.l-main {
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: 16px;
+  max-width: 675px;
+
+
+  @include breakpoint-min($bp-small) {
+    padding-inline: 32px;
+  }
+}

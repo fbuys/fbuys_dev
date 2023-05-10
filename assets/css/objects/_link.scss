@@ -1,0 +1,17 @@
+a {
+  color: var(--brand);
+  text-decoration: none;
+
+  &:visited {
+    color: var(--violet);
+  }
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+}
