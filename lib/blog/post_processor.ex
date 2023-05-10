@@ -13,6 +13,11 @@ defmodule FbuysDev.Blog.PostProcessor do
     |> merge_class("l-post-paragraph")
   end
 
+  def process({tag, atts, content, meta}) when tag == "blockquote" do
+    {tag, atts, content, meta}
+    |> merge_class("l-post-blockquote c-post-blockquote")
+  end
+
   def process(value), do: value
 
   # private

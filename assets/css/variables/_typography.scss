@@ -11,13 +11,16 @@ html {
     Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
     Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol;
+  --font-1: "Montserrat", var(--font-sans-serif);
+  --font-2: "Lobster", cursive;
+  --font-3: "Rock Salt", cursive;
 
   /* Set a global default */
   font-family: 'Montserrat', var(--font-sans-serif);
 }
 
 .t1 {
-  font-family: 'Lobster', cursive;
+  font-family: var(--font-2);
   font-size: 32px;
   font-weight: 400;
   line-height: 1.2;

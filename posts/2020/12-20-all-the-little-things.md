@@ -33,7 +33,7 @@ other as possible.
 What should you do next time you face challenging code? First, you should refactor the code
 into smaller methods and then into smaller objects.
 
-> "Small methods are easy" _Sandi Metz_
+> Small methods are easy _Sandi Metz_
 
 # Find problematic code using the squint test
 
@@ -56,7 +56,7 @@ insight. We wait until the right abstraction becomes apparent before we implemen
 We can tag our duplicated code with "Dup Tag" comments. Each comment can give the
 duplicated code an ID. We will soon notice the same dup tag in different places.
 
-> "Duplication is far cheaper than the wrong abstraction" _Sandi Metz_
+> Duplication is far cheaper than the wrong abstraction _Sandi Metz_
 
 # Add behaviour without changing existing code
 
@@ -86,7 +86,7 @@ that we can only refactor if we have reliable tests.
 The alterantive, when we don't trust our tests, is to keep code as it is forever. Sandi
 insists that keeping code around forever is not a good choice.
 
-> "Make the change easy, then make the easy change" _Kent Beck_
+> Make the change easy, then make the easy change _Kent Beck_
 
 # Conclusion
 Don't be afraid to create smaller things. We need to understand the principles of object
