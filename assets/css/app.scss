@@ -1,11 +1,17 @@
+// Vendor libraries
+@import 'vendors';
+
 // Variables
 // ---------
-@import 'variables/typography';
 @import 'variables/breakpoints';
+@import 'variables/colors';
+@import 'variables/themes';
+@import 'variables/typography';
 
 // Reset and base files
 // --------------------
 @import 'reset';
+@import 'base';
 
 // Global Layouts
 // -------
