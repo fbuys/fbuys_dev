@@ -14,7 +14,7 @@ some of the insights I gained.
 
 <!-- more -->
 
-# Big ideas
+# TLDR;
 
 - ✅ Make smaller things
 - ✅ Find problematic code using the squint test
@@ -26,7 +26,7 @@ some of the insights I gained.
 # Make smaller things
 
 Sandi is right when she says that we often come to hate our code. To improve or prevent
-this situation, she suggests that we **make smaller things**. In practice, it means
+this situation, she suggests that we _make smaller things_. In practice, it means
 that we should make smaller methods and smaller classes that know as little about each
 other as possible.
 
