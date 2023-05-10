@@ -4,11 +4,13 @@ defmodule FbuysDev.Blog.PostProcessor do
   """
 
   def process({tag, atts, content, meta}) when tag == "h1" do
-    merge_class({tag, atts, content, meta}, "t1 l-t1")
+    {tag, atts, content, meta}
+    |> merge_class("t1 l-t1")
   end
 
-  def process({tag, atts, content, meta}) when tag in ["p", "ul"] do
-    merge_class({tag, atts, content, meta}, "l-post-paragraph")
+  def process({tag, atts, content, meta}) when tag in ["p", "ul", "ol"] do
+    {tag, atts, content, meta}
+    |> merge_class("l-post-paragraph")
   end
 
   def process(value), do: value
