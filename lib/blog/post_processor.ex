@@ -10,7 +10,7 @@ defmodule FbuysDev.Blog.PostProcessor do
 
   def process({tag, atts, content, meta}) when tag in ["p", "ul", "ol"] do
     {tag, atts, content, meta}
-    |> merge_class("l-post-paragraph")
+    |> merge_class("l-post-paragraph c-post-paragraph")
   end
 
   def process({tag, atts, content, meta}) when tag == "blockquote" do

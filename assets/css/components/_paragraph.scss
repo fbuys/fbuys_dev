@@ -1,0 +1,9 @@
+.l-post-paragraph {
+  padding-block-end: 24px;
+}
+
+.c-post-paragraph {
+  & em, & strong {
+    color: var(--cyan);
+  }
+}
