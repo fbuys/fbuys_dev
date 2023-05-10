@@ -46,8 +46,7 @@ defmodule FbuysDev do
   def index(assigns) do
     ~H"""
     <.layout>
-      <h1>fbuys.dev</h1>
-      <h2>Posts!</h2>
+      <h1 class="t1 l-t1">Posts!</h1>
       <ul>
         <li :for={post <- @posts}>
           <a href={post.path}> <%= post.title %> </a>
