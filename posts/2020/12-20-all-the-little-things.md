@@ -5,7 +5,7 @@
 }
 ---
 
-I wrote this post inspired by [SandiMetz](https://sandimetz.com/about){:target='_blank' rel='noreferrer noopener'},
+I wrote this post inspired by [Sandi Metz](https://sandimetz.com/about){:target='_blank' rel='noreferrer noopener'},
 a legend in the object-oriented design community.
 [All the little things](https://www.youtube.com/watch?v=8bZh5LMaSmE){:target='_blank' rel='noreferrer noopener'}
 is a talk suggested to me by [Chris Toomey](https://ctoomey.com){:target='_blank' rel='noreferrer noopener'}
