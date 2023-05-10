@@ -18,15 +18,16 @@
     font-size: var(--font-size-6);
     width: var(--size-3);
     top: var(--size-2);
-    left: var(--size-2);
   }
 
   &::before {
     content: '“';
+    left: var(--size-2);
   }
 
   &::after {
     content: '”';
+    right: var(--size-2);
   }
 
   & em {
