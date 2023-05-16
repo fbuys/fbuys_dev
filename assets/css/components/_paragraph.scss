@@ -3,6 +3,8 @@
 }
 
 .c-post-paragraph {
+  hyphens: auto;
+
   & em, & strong {
     color: var(--cyan);
   }
