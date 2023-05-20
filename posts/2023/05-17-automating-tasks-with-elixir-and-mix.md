@@ -47,14 +47,14 @@ and much more. To create a new Elixir app, follow these steps:
 1. Open a terminal window and navigate to the directory where you want to create your app.
 2. Run the following command:
 
-```elixir
+```shell
 Mix new <app-name>
 ```
 
 Replace `<app-name>` with the name of your app. For example, to create an app named
 "my_app", you would run the following command:
 
-```bash
+```shell
 $ Mix new my_app
 ```
 
@@ -129,7 +129,7 @@ the task we are automating. If you need some inspiration you can go visit the
 Help text is a great way to document your Mix tasks and make them easier to use. You can add help text to your tasks using the `@shortdoc` and `@moduledoc` attributes.
 
 The `@shortdoc` attribute is used to add a short description of the task. This description will be displayed when the user runs the `Mix help` command. For example:
-```elixer
+```elixir
 @shortdoc "Creates a new Elixir project"
 ```
 
@@ -259,7 +259,7 @@ end
 To prevent polluting test output we swap the default shell with a test shell that sends
 the output to our current test process.
 
-```ellixir
+```elixir
 # Get Mix output sent to the current
 # process to avoid polluting tests.
 Mix.shell(Mix.Shell.Process)
