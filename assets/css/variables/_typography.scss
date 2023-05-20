@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Rock+Salt&display=swap');
-// font-family: 'Lobster', cursive;
-// font-family: 'Montserrat', sans-serif;
-// font-family: 'Rock Salt', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Patrick+Hand+SC&display=swap');
 
 html {
   --font-sans-serif:
@@ -13,9 +10,9 @@ html {
     Segoe UI Emoji, Segoe UI Symbol;
   --font-1: "Montserrat", var(--font-sans-serif);
   --font-2: "Lobster", cursive;
-  --font-3: "Rock Salt", cursive;
+  --font-3: "Patrick Hand SC", cursive;
 
-  /* Set a global default */
+  /* Set a global defult */
   font-family: 'Montserrat', var(--font-sans-serif);
 }
 

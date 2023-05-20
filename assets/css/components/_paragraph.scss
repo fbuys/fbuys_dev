@@ -1,8 +1,12 @@
-.l-post-paragraph {
-  padding-block-end: 24px;
+// including pre because there is no easy way to add a class to pre blocks
+// But they should have the same layout as paragraphs
+.l-post-paragraph, pre {
+  margin-block-end: var(--size-7);
 }
 
 .c-post-paragraph {
+  hyphens: auto;
+
   & em, & strong {
     color: var(--cyan);
   }

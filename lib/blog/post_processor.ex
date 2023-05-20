@@ -3,18 +3,18 @@ defmodule FbuysDev.Blog.PostProcessor do
     For more help see: https://github.com/dashbitco/nimble_publisher/issues/10
   """
 
-  def process({tag, atts, content, meta}) when tag == "h1" do
-    {tag, atts, content, meta}
+  def process({tag, _atts, _content, _meta} = attrs) when tag == "h1" do
+    attrs
     |> merge_class("t1 l-t1")
   end
 
-  def process({tag, atts, content, meta}) when tag in ["p", "ul", "ol"] do
-    {tag, atts, content, meta}
+  def process({tag, _atts, _content, _meta} = attrs) when tag in ["p", "ul", "ol"] do
+    attrs
     |> merge_class("l-post-paragraph c-post-paragraph")
   end
 
-  def process({tag, atts, content, meta}) when tag == "blockquote" do
-    {tag, atts, content, meta}
+  def process({tag, _atts, _content, _meta} = attrs) when tag == "blockquote" do
+    attrs
     |> merge_class("l-post-blockquote c-post-blockquote")
   end
 
@@ -22,7 +22,7 @@ defmodule FbuysDev.Blog.PostProcessor do
 
   # private
 
-  defp merge_class({tag, atts, content, meta}, class) do
-    Earmark.AstTools.merge_atts_in_node({tag, atts, content, meta}, class: class)
+  defp merge_class(attrs, class) do
+    Earmark.AstTools.merge_atts_in_node(attrs, class: class)
   end
 end
