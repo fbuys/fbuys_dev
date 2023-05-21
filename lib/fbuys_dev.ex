@@ -68,12 +68,43 @@ defmodule FbuysDev do
         <link rel="stylesheet" href={"/assets/app.css?#{asset_hash()}"} />
         <script type="text/javascript" src={"/assets/app.js?#{asset_hash()}"} />
       </head>
-      <body>
-        <main tabindex="-1" id="main-content" class="l-main">
+      <body class="l-page">
+        <main tabindex="-1" id="main-content" class="l-wrapper">
           <%= render_slot(@inner_block) %>
         </main>
+        <.footer />
       </body>
     </html>
+    """
+  end
+
+  def footer(assigns) do
+    ~H"""
+    <footer class="l-footer c-footer">
+      <article class="l-wrapper c-footer">
+        <h2 class="t1 l-t1">Footer</h2>
+        <p class="l-paragraph">
+          This site is part of my work as I learn in public, and I use it to share my
+          thoughts and experiences on a variety of topics, including software development
+          and personal development. 
+        </p>
+        <p class="l-paragraph">
+          You'll find a mix of full-length essays and shorter notes here, and I hope you
+          find something of value.
+        </p>
+        <p class="l-paragraph">
+          Thank you for visiting, and I hope you enjoy your time on my website.
+        </p>
+        <nav class="l-footer-nav c-footer-nav">
+          <a href="/" class="c-footer-link">home</a>
+          <!-- More links go here-->
+        </nav>
+        <p class="l-copyright s1">
+          Copyright &copy; <script>document.write(new Date().getFullYear())</script> |
+          Built with 💛 by Francois Buys
+      </p>
+      </article>
+    </footer>
     """
   end
 

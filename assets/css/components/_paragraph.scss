@@ -1,6 +1,6 @@
 // including pre because there is no easy way to add a class to pre blocks
 // But they should have the same layout as paragraphs
-.l-post-paragraph, pre {
+.l-paragraph, pre {
   margin-block-end: var(--size-7);
 }
 
