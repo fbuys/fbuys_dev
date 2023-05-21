@@ -1,0 +1,29 @@
+.l-footer {
+  margin-block-start: var(--size-12);
+  padding-block: var(--size-7);
+}
+
+.l-footer-nav {
+  text-align: center;
+}
+
+.c-footer-nav {
+  margin-block-start: var(--size-9);
+  margin-block-end: var(--size-3);
+}
+
+.c-footer {
+  background-color: var(--purple);
+  border-start-start-radius: var(--radius-4);
+  border-start-end-radius: var(--radius-4);
+}
+
+.l-copyright {
+  text-align: center;
+}
+
+.c-footer-link {
+  &:visited {
+    color: var(--brand);
+  }
+}

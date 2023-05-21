@@ -8,6 +8,7 @@
 @import 'variables/colors';
 @import 'variables/themes';
 @import 'variables/typography';
+@import 'variables/sizes';
 
 // Reset and base files
 // --------------------
@@ -25,5 +26,6 @@
 // components
 // -------
 @import 'components/blockquote';
+@import 'components/footer';
 @import 'components/code_block';
 @import 'components/paragraph';
