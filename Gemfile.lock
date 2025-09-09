@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/benpickles/decant
+  revision: ba48619f5b705c576934ed3638f6a36d2a943ba4
+  specs:
+    decant (0.4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -141,6 +147,10 @@ GEM
       sshkit (>= 1.23.0, < 2.0)
       thor (~> 1.3)
       zeitwerk (>= 2.6.18, < 3.0)
+    kramdown (2.4.0)
+      rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     logger (1.7.0)
@@ -378,9 +388,12 @@ DEPENDENCIES
   capybara
   cssbundling-rails
   debug
+  decant!
   jbuilder
   jsbundling-rails
   kamal
+  kramdown
+  kramdown-parser-gfm
   parklife
   propshaft
   puma (>= 5.0)
