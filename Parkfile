@@ -9,6 +9,8 @@ end
 Parklife.application.routes do
   root crawl: true
 
+  get blog_posts_path, crawl: true
+
   # Add further paths not discovered by crawling from the root - Parklife's
   # Rails integration lets you use the app's route helpers:
   #

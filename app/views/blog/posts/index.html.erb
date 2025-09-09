@@ -1,0 +1,15 @@
+<h1>Blog Posts</h1>
+
+<% @grouped_posts.each do |group, posts| %>
+  <h2><%= group %></h2>
+  <ul>
+    <% posts.each do |post| %>
+      <li>
+        <%= link_to post.title, blog_post_path(year: post.published_year, slug: post.slug) %>
+        <span>published on <%= post.published_on.strftime("%b %d, %Y") %></span>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+
