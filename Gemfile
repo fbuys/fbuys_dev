@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.2", ">= 8.0.2.1"
+gem "rails", "~> 8.0.3"
 
 gem "bootsnap", require: false # Reduces boot times through caching; required in config/boot.rb
 gem "cssbundling-rails" # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
