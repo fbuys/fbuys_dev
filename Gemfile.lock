@@ -200,10 +200,13 @@ GEM
       racc (~> 1.4)
     ostruct (0.6.3)
     parallel (1.27.0)
-    parklife (0.7.0)
+    parklife (0.8.0)
       nokogiri
       rack-test
       thor
+    parklife-rails (0.3.0)
+      parklife (>= 0.8.0.beta1)
+      rails
     parser (3.3.9.0)
       ast (~> 2.4.1)
       racc
@@ -394,7 +397,7 @@ DEPENDENCIES
   kamal
   kramdown
   kramdown-parser-gfm
-  parklife
+  parklife-rails
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.2, >= 8.0.2.1)

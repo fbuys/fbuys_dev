@@ -22,7 +22,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ] # Windows does not include zon
 # Blog
 gem "decant", git: "https://github.com/benpickles/decant"
 # A dependency-free frontmatter-aware framework-agnostic wrapper around a directory of static content. [https://github.com/benpickles/decant]
-gem "parklife" # A Ruby library to render a Rack app (Rails/Sinatra/etc) to a static site [https://parklife.dev/rails]
+gem 'parklife-rails' # Rails integration for Parklife [https://github.com/benpickles/parklife-rails]
 gem "kramdown" # A fast, pure Ruby Markdown superset converter [https://kramdown.gettalong.org/documentation.html]
 gem "kramdown-parser-gfm" # A GitHub Flavored Markdown parser for Kramdown [https://github.com/kramdown/parser-gfm]
 
