@@ -32,9 +32,10 @@ get "/blog" do
     .select { _1.published_on && _1.published_on < Date.today }
     .sort_by(&:published_on).reverse
     .group_by(&:published_year)
-  erb :"blog/index"
+  erb :"blog/posts/index"
 end
 
 get "/blog/posts/:year/:slub" do |year, slug|
-  "Post from #{year} with slug: #{slug}"
+  @post = Blog::Post.find(request.path.sub(%r{/?blog/posts/}, ""))
+  erb :"blog/posts/show"
 end

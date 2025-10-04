@@ -5,7 +5,7 @@
   <ul>
     <% posts.each do |post| %>
       <li>
-        <a href="<%= url("/blog/posts/#{post.published_year}/#{post.slug}") %>" aria-label="Link to <%= post.title %>">
+        <a href="<%= "/blog/posts/#{post.published_year}/#{post.slug}" %>" aria-label="Link to <%= post.title %>">
           <%= post.title %>
         </a>
         <span>published on <%= post.published_on.strftime("%b %d, %Y") %></span>
