@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -eu
+
+bin/static-build --base http://localhost:4567
+

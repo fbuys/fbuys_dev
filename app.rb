@@ -23,11 +23,7 @@ set :markdown,
   smartypants: true,
   views: "content"
 
-get "/" do
-  redirect to("/blog")
-end
-
-get "/blog" do
+get %w[/ /blog] do
   @grouped_posts = Blog::Post.all
     .select { _1.published_on && _1.published_on < Date.today }
     .sort_by(&:published_on).reverse
