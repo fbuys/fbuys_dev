@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://unpkg.com/open-props");
+
+:root {
+  --font-alt: 'Bricolage Grotesque', 'Inter', 'Segoe UI', Arial, sans-serif;
+  --font-body: 'Montserrat', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  
+  --size-0000: -1rem;
+}
+
+/* Reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* Global styles */
+
+html {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--size-3);
+  color: var(--gray-9);
+  background-color: var(--gray-2);
+}
+
+a {
+  color: var(--cyan-7);
+}
+
+a:visited {
+  color: var(--violet-9);
+}
+
+.blog-post-page {
+}
+
+.c-post, .c-post-list {
+  background: white;
+  background-color: var(--gray-0);
+
+  max-width: 40rem;
+  margin-inline: auto;
+
+  padding: clamp(2rem, 10vw, 3rem) clamp(1.5rem, 10vw, 4rem);
+
+  border-radius: var(--radius-2);
+
+  h1 {
+    font-family: var(--font-alt);
+    font-size: var(--size-7);
+    font-weight: var(--font-weight-7);
+    line-height: var(--font-lineheight-5);
+
+    padding-block-end: var(--size-3);
+  }
+
+  h2 {
+    font-family: var(--font-alt);
+    font-size: var(--size-5);
+    font-weight: var(--font-weight-7);
+    line-height: var(--font-lineheight-1);
+
+    padding-block-start: var(--size-4);
+    padding-block-end: var(--size-3);
+  }
+
+  & p:not(blockquote p), & ul, & ol {
+    padding-block-end: var(--size-2);
+  }
+
+  blockquote:not(p em) {
+    position: relative;
+
+    font-family: var(--font-alt);
+
+    color: var(--gray-8);
+    background-color: var(--gray-1);
+
+    padding: var(--size-2) var(--size-4);
+
+    border-left: 4px solid var(--gray-5);
+    border-radius: var(--radius-1);
+
+    margin-block: var(--size-4);
+  }
+
+  blockquote p em  {
+    position: absolute;
+    bottom: 0;
+    right: var(--size-1);
+    margin-bottom: var(--size-0000);
+
+    font-family: var(--font-body);
+    font-size: var(--size-2);
+
+    color: var(--cyan-7);
+
+    &:before {
+      content: '— ';
+    }
+  }
+}
+
+

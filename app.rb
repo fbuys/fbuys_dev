@@ -18,7 +18,7 @@ end
 
 configure :development do
   # Disable host authorization in development to allow access from any host.
-  set :host_authorization, { permitted_hosts: [] }
+  set :host_authorization, {permitted_hosts: []}
 end
 
 # Configure Sinatra's Markdown rendering (Kramdown will be used because it's
@@ -38,5 +38,6 @@ end
 
 get "/blog/posts/:year/:slub" do |year, slug|
   @post = Blog::Post.find(request.path.sub(%r{/?blog/posts/}, ""))
+  @body_class = "blog-post-page"
   erb :"blog/posts/show"
 end
