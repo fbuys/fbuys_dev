@@ -1,6 +1,7 @@
 require "sinatra"
 require "decant"
 require "kramdown"
+require "rouge"
 
 module Blog
   Post = Decant.define(dir: "content/blog/posts", ext: "md") do
@@ -30,7 +31,7 @@ set :markdown,
 
 get %w[/ /blog] do
   @grouped_posts = Blog::Post.all
-    .select { _1.published_on && _1.published_on < Date.today }
+    .select { _1.published_on && _1.published_on <= Date.today }
     .sort_by(&:published_on).reverse
     .group_by(&:published_year)
   erb :"blog/posts/index"

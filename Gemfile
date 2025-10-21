@@ -6,6 +6,7 @@ gem "decant", git: "https://github.com/benpickles/decant" # Static site generato
 gem "kramdown" # Markdown parser and converter [https://rubygems.org/gems/kramdown]
 gem "kramdown-parser-gfm" # GitHub Flavored Markdown parser for Kramdown [https://rubygems.org/gems/kramdown-parser-gfm]
 gem "parklife" # Static site generator and blog engine [https://rubygems.org/gems/parklife]
+gem "rouge" # Syntax highlighter [https://rubygems.org/gems/rouge]
 
 group :development do
   gem "debug" # Debugging library for Ruby [https://rubygems.org/gems/debug]

@@ -9,6 +9,7 @@
     <%# <link rel="icon" href="/icon.svg" type="image/svg+xml"> %>
     <%# <link rel="apple-touch-icon" href="/icon.png"> %>
     <link href="<%= url("/css/application.css?#{Time.now.utc.to_i}", false) %>" rel="stylesheet" type="text/css">
+    <link href="<%= url("/css/syntax.css?#{Time.now.utc.to_i}", false) %>" rel="stylesheet" type="text/css">
   </head>
 
   <body class="<%= @body_class if @body_class %>">
