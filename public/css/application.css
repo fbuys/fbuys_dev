@@ -102,9 +102,9 @@ a:visited {
     font-family: var(--font-alt);
     font-size: var(--size-7);
     font-weight: var(--font-weight-7);
-    line-height: var(--font-lineheight-5);
+    line-height: var(--font-lineheight-1);
 
-    padding-block-end: var(--size-3);
+    padding-block-end: var(--size-7);
   }
 
   h2 {
