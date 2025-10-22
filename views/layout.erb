@@ -14,5 +14,42 @@
 
   <body class="<%= @body_class if @body_class %>">
     <%= yield %>
+
+    <footer class="l-centered-page c-footer">
+      <nav class="c-footer-nav" aria-label="Footer Links">
+        <ul>
+          <li>
+            <a href="/" aria-label="Home">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="https://letterbird.co/fbuys" target="_blank" rel="noopener" aria-label="Contact me">
+              Contact me
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/fbuys_dev" target="_blank" rel="noopener" aria-label="X">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/fbuys/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="c-footer-about" aria-labelledby="footer-about">
+        <p id="footer-about">
+          This site is where I learn in public — sharing what I’m building, discovering, and thinking about in software and life.
+        </p>
+      </section>
+
+      <section class="c-footer-copyright">
+        <p>Copyright © <%= Time.now.year %> | Built with 💛 by Francois Buys</p>
+      </section>
+    </footer>
   </body>
 </html>
