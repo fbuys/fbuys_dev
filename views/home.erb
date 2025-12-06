@@ -1,0 +1,54 @@
+<main class="l-centered-page">
+  <header class="c-home-header">
+    <div class="o-avatar">
+      <img
+          class="o-avatar__img"
+          src="/images/pp-500x500.png"
+          alt="Francois Buys header profile picture"
+          />
+    </div>
+
+    <div class="c-home-header__intro">
+      <h1>
+        Hello 👋, I’m Francois
+      </h1>
+      <h2>
+        Senior full-stack Ruby engineer who values simplicity, clarity, and meaningful craft.
+      </h2>
+    </div>
+  </header>
+
+  <article class="c-home-about-me"
+    <p>
+      I’m a full-stack Rails engineer who cares deeply about simplicity, clarity, and building
+      things that actually matter. I love refining systems, solving tricky problems with Ruby,
+      and making software more dependable and easier to live with.
+    </p>
+    <p>
+      I’m also someone who values genuine connection. Whether I’m working with a team,
+      collaborating on a feature, or helping someone grow, I try to bring respect, calm, and
+      authenticity into the room.
+    </p>
+    <p>
+      Outside the code, I’m a husband, a father, and a person who enjoys creating spaces (digital
+      or physical) where people feel supported and able to breathe a little easier.
+    </p>
+  </article>
+
+  <article class="c-featured-posts">
+    <h2> Writing </h2>
+    <% @grouped_posts.each do |group, posts| %>
+      <h3><%= group %></h3>
+      <ul>
+        <% posts.each do |post| %>
+          <li>
+            <a href="<%= url("/blog/posts/#{post.published_year}/#{post.slug}", false) %>" aria-label="Link to <%= post.title %>">
+              <%= post.title %>
+            </a>
+            <span>published on <%= post.published_on.strftime("%b %d, %Y") %></span>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </article>
+</main>
