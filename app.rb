@@ -29,11 +29,13 @@ set :markdown,
   smartypants: true,
   views: "content"
 
-get %w[/ /blog] do
-  @grouped_posts = Blog::Post.all
-    .select { _1.published_on && _1.published_on <= Date.today }
-    .sort_by(&:published_on).reverse
-    .group_by(&:published_year)
+get "/" do
+  @grouped_posts = grouped_posts_by_year
+  erb :home
+end
+
+get "/blog" do
+  @grouped_posts = grouped_posts_by_year
   erb :"blog/posts/index"
 end
 
@@ -41,4 +43,13 @@ get "/blog/posts/:year/:slub" do |year, slug|
   @post = Blog::Post.find(request.path.sub(%r{/?blog/posts/}, ""))
   @body_class = "blog-post-page"
   erb :"blog/posts/show"
+end
+
+private
+
+def grouped_posts_by_year
+  Blog::Post.all
+    .select { _1.published_on && _1.published_on <= Date.today }
+    .sort_by(&:published_on).reverse
+    .group_by(&:published_year)
 end
