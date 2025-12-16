@@ -1,6 +1,6 @@
 ---
 title: "Bring Your Own Privacy (BYOP)"
-published_on: 2025-12-16
+published_on: 2025-12-15
 ---
 
 This post is me doing my small bit to advocate for better digital privacy practices.
