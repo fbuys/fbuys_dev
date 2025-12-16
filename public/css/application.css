@@ -81,6 +81,11 @@ p {
   padding-block-end: var(--size-2);
 }
 
+ul + p,
+ol + p {
+  padding-block-start: var(--size-2);
+}
+
 a {
   color: var(--cyan-7);
 }
@@ -119,6 +124,17 @@ a:visited {
 
     padding-block-start: var(--size-4);
     padding-block-end: var(--size-3);
+  }
+
+  h3 {
+    font-family: var(--font-alt);
+    font-size: var(--size-3);
+    font-weight: var(--font-weight-6);
+    line-height: var(--font-lineheight-1);
+    color: var(--gray-7);
+
+    padding-block-start: var(--size-3);
+    padding-block-end: var(--size-2);
   }
 
   blockquote:not(p em) {
